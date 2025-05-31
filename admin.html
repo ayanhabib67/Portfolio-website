@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+        }
+        .neon-glow {
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        .neon-input {
+            transition: all 0.3s ease;
+        }
+        .neon-input:focus {
+            box-shadow: 0 0 15px rgba(147, 51, 234, 0.7);
+            border-color: #9333ea;
+        }
+        .neon-button {
+            background: linear-gradient(45deg, #3b82f6, #9333ea);
+            transition: all 0.3s ease;
+        }
+        .neon-button:hover {
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.7);
+        }
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .project-card {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 font-sans">
+    <div class="w-full max-w-2xl bg-gray-900 rounded-lg shadow-lg p-6 neon-glow">
+        <h1 class="text-3xl font-bold text-white mb-6 text-center">Add Portfolio Project</h1>
+        
+        <!-- <form id="portfolioForm" class="space-y-4"> -->
+            <div>
+                <input 
+                    type="text" 
+                    id="title" 
+                    placeholder="Title" 
+                    class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md focus:outline-none neon-input"
+                >
+            </div>
+            <br><br>
+            <div>
+                <textarea 
+                    id="discripction" 
+                    placeholder="Description" 
+                    class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md focus:outline-none neon-input h-32"
+                ></textarea>
+                <br><br>
+            </div>
+            <div>
+                <input 
+                    type="text" 
+                    id="projectName" 
+                    placeholder="Technologies (e.g., HTML, CSS, JavaScript)" 
+                    class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md focus:outline-none neon-input"
+                >
+            </div>
+            <br><br>
+            <div>
+                <input 
+                    type="url" 
+                    id="url" 
+                    placeholder="Project URL" 
+                    class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md focus:outline-none neon-input"
+                >
+            </div>
+            <br><br>
+            <button 
+                type="submit" 
+                id="addPortfolio" 
+                class="w-full text-white p-3 rounded-md neon-button"
+            >
+                Add Portfolio
+            </button>
+            <br><br>
+            <button 
+            type="button"
+            class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 transition duration-300"
+      id="UserMessages"
+            >
+            User Messages
+        </button>
+
+        <br><br>
+
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-50 transition duration-300" id="logout-Btn">
+                Logout
+            </button>
+        <!-- </form> -->
+
+        <div id="projects" class="mt-8 space-y-4"></div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="admin.js" type="module"></script>
+</body>
+</html> 
+ 
+
+
+
